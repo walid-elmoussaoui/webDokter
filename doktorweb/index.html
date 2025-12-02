@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Document</title>
+
+    <style>
+            *{
+    text-decoration: none;
+    color: black;
+    font-family: 'Inter', 'Roboto', 'Helvetica', sans-serif;
+    
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, sans-serif;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    width: 100px;
+    height: auto;
+    margin-left: 100px;
+    border-radius: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: -200px;
+}
+
+.nav-links li a {
+    font-size: 16px;
+    color: #222;
+    transition: 0.3s;
+    margin: 0 10px;
+}
+
+.nav-links li a:hover {
+    color: #008000;
+}
+
+.nav-links li a.active {
+    color: #008000;
+    font-weight: bold;
+}
+
+.Appointment {
+    color: #FFFFFF;
+    border-radius: 20px;
+    background-color: #008000;
+    padding: 15px 20px;
+    margin-right: 60px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;top: 10px;
+}
+
+.Appointment:hover {
+    background-color: #0eac0e;
+    color: #FFFFFF;
+}
+
+/* ================= HERO SECTION ================= */
+
+.content {
+    border-radius: 20px;
+    background-image: url('./woman-health.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 90%;
+    margin-left: 60px;
+    z-index: -1000;
+}
+
+.texteContent {
+    position: relative;
+    top: 20%;
+    left: 5%;
+}
+
+.texteContent p {
+    font-weight: 700;
+}
+
+.texteContent .Appointment {
+    margin: 30px 0;
+}
+
+/* ================= ABOUT ================= */
+
+.aboutIcon{
+    border-radius: 100px;
+    width: 600px;
+    margin-top: 100px;
+}
+
+.about {
+    margin-top: 40px;
+    margin-left: 60px;
+    display: flex;
+}
+
+.aboutContent {
+    margin-top: 50px;
+    text-align: center;
+    width: 400px;
+    margin-left: 10%;
+    margin-top: 150px;
+}
+.aboutContent h1{
+    position: relative;left: -120px;
+}
+
+
+.aboutContent p {
+    text-align: justify;
+    font-weight: 700;
+}
+
+.aboutContent .Appointment {
+    position: relative;
+    left: -100px;
+    top: 40px;
+}
+
+/* ================= SERVICE CARDS ================= */
+
+.divcart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.cartService {
+    width: 300px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.cartService:hover {
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+}
+
+.cartService img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+.cartService:hover img {
+    transform: scale(1.1);
+}
+
+.cartService h2 {
+    margin-top: 15px;
+}
+
+.cartService p {
+    text-align: justify;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo-box {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .Appointment {
+        margin: 10px 0;
+        width: 70%;
+    }
+}
+
+/* HERO */
+@media (max-width: 900px) {
+    .content {
+        height: 400px;
+        width: 95%;
+        margin-left: 0;
+        border-radius: 0;
+    }
+
+    .texteContent h1 {
+        font-size: 28px;
+    }
+}
+
+/* ABOUT */
+@media (max-width: 900px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .aboutIcon {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .aboutContent {
+        width: 90%;
+    }
+}
+
+/* SERVICE CARDS */
+@media (max-width: 900px) {
+    .divcart {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cartService {
+        width: 90%;
+    }
+}
+
+/* ================= INFO SECTION ================= */
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    width: 360px;
+    min-height: 380px;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    width: 55px;
+    margin-bottom: 20px;
+}
+
+.info-card h4 {
+    color: #6690b0;
+    font-size: 16px;
+}
+
+.info-card h2 {
+    color: #143666;
+    font-size: 24px;
+}
+
+/* ================= FOOTER ================= */
+
+/* ================= FOOTER (UPDATED CLEAN MODERN STYLE) ================= */
+
+.footer {
+    background: #f3f7f3;
+    padding: 70px 60px 20px;
+    border-top: 1px solid #dce7dc;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.footer-logo img {
+    width: 110px;
+    margin-bottom: 15px;
+}
+
+.footer-desc {
+    width: 90%;
+    color: #4f5f4f;
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e3f2ea;
+    margin-right: 10px;
+    color: #006b2f;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #006b2f;
+    color: #fff;
+}
+
+/* Column Titles */
+.footer-col h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: #003f1b;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.footer-col h3::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #008000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin: 12px 0;
+}
+
+.footer-col ul li a {
+    color: #4a5a4a;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #008000;
+    padding-left: 3px;
+}
+
+.footer-mail,
+.footer-phone {
+    font-weight: bold;
+    color: #003f1b;
+    font-size: 16px;
+}
+
+/* ================= BOTTOM AREA ================= */
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #d6e5d6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    color: #4a5a4a;
+    margin-bottom: 12px;
+}
+
+.footer-bottom .green {
+    color: #008000;
+    font-weight: bold;
+}
+
+.subscribe-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe-box input {
+    padding: 12px 15px;
+    border: 1px solid #cfe4cf;
+    background: #f9fff9;
+    border-radius: 25px;
+    width: 260px;
+    outline: none;
+}
+
+.subscribe-box button {
+    padding: 12px 25px;
+    background: #008000;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.subscribe-box button:hover {
+    background: #0fa90f;
+}
+
+/* responsive footer */
+@media (max-width: 700px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .subscribe-box {
+        justify-content: center;
+    }
+}
+
+/* ================= APPOINTMENT SECTION ================= */
+
+.appointment-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 60px 80px;
+}
+
+/* LEFT SIDE */
+.left-side {
+    width: 40%;
+    position: relative;
+}
+
+.doctor-img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.contact-box {
+    position: absolute;
+    bottom: 80px;
+    left: 135px;
+    width: 70%;
+    background: #183661;
+    color: white;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    border-radius: 4px;
+}
+
+.phone-number {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* RIGHT SIDE */
+.right-side {
+    width: 55%;
+}
+
+.right-side h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #1b3153;
+}
+
+.right-side p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* ================= NEW APPOINTMENT BOX ================= */
+
+.appointment-box {
+    width: 450px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.appointment-box h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1b3055;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #6b6b6b;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.appointment-box .form-grid select,
+.appointment-box .form-grid input {
+    padding: 12px;
+    border: 1px solid #dfe6ee;
+    border-radius: 5px;
+    background: #f7fbff;
+}
+
+.msg-box {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border: 1px solid #dfe6ee;
+    border-radius: 5px;
+    background: #f7fbff;
+    font-size: 15px;
+}
+
+
+
+.submit-btn:hover {
+    background: #0f203b;
+}
+
+/* Modern Medical Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f4f8; /* soft medical grey-blue */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3cbfae, #1a9fd9); /* medical green → medical blue */
+  border-radius: 10px;
+  border: 2px solid #f0f4f8; /* adds clean separation */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #34a895, #1489c0);
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3cbfae #f0f4f8;
+}
+
+ 
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-box">
+                <img src="./26835.jpg" class="logo-icon" alt="logo">
+            </div>
+
+            <ul class="nav-links">
+                <li class="active">Home</li>
+                <li><a href="http://">Services</a></li>
+                <li><a href="http://">Doctors</a></li>
+                <li><a href="http://">Blog</a></li>
+                <li><a href="http://">Contact</a></li>
+            </ul>
+            <a class="Appointment" href="#appointment">Marke an Appointment</a>
+        </nav>
+
+    </header>
+
+
+    <nav>
+        <div class="content">
+            <div class="texteContent">
+             <p>We are here for your care</p>
+             <h1>Best Care & <br> Better Doctor</h1>
+             <p>In healthcare sector, service excellence is the facility of <br>
+                 the hospital as healthcare service provider to consistently.</p>
+            <a class="Appointment" href="#appointment">Marke an Appointment</a>
+            </div>
+        </div>
+        <div class="divcart">
+            <div class="info-card">
+        <img src="icon1.png" class="info-icon" alt="">
+        <h4>24 Hours Service</h4>
+        <h2>Online Appointment</h2>
+        <p>
+            Get ALI time support for emergency.  
+            We have introduced the principle of family medicine.
+        </p>
+        <a href="#appointment" class="Appointment" >MAKE A APPOINTMENT</a>
+    </div>
+
+    <div class="info-card">
+        <img src="icon2.png" class="info-icon" alt="">
+        <h4>Timing schedule</h4>
+        <h2>Working Hours</h2>
+
+        <ul class="hours">
+            <li><span>Sun - Wed :</span> <span>8:00 - 17:00</span></li>
+            <li><span>Thu - Fri :</span> <span>9:00 - 17:00</span></li>
+            <li><span>Sat - sun :</span> <span>10:00 - 17:00</span></li>
+        </ul>
+    </div>
+
+    <div class="info-card">
+        <img src="icon3.png" class="info-icon" alt="">
+        <h4>Emergency Cases</h4>
+        <h2>06 66 66 66 66</h2>
+        <p>
+            Get ALI time support for emergency.  
+            We have introduced the principle of family medicine.  
+            Get connected with us for any urgency.
+        </p>
+    </div>
+
+        </div>
+        <div class="about">
+            <div>
+                <img class="aboutIcon" src="./about.jpg" alt="about">
+            </div>
+            <div class="aboutContent">
+                <h1>About us</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aut aspernatur labore! Obcaecati dolorum, optio ipsam velit vero corporis rerum cum. Culpa, rerum consequuntur omnis nesciunt modi non soluta recusandae!
+                </p>
+                <a class="Appointment" href="#">leran more</a>
+
+            </div>
+        </div>
+        <div class="service" style="margin-top:40px;">
+    <h1 style="text-align: center;">Service</h1>
+
+    <div class="divcart">
+
+        <div class="cartService"> 
+            <img src="./ct-scan.jpg" alt="">
+            <h2>CT Scan</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatibus officia animi delectus libero accusantium alias ipsa temporibus ad.</p>
+        </div>
+
+        <div class="cartService">
+            <img src="./ct-scan.jpg" alt="">
+            <h2>Child Care</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit dolores fugiat a debitis atque repellat voluptatem sequi aut.</p>
+        </div>
+
+        <div class="cartService">
+            <img src="./ct-scan.jpg" alt="">
+            <h2>Child Care</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit dolores fugiat a debitis atque repellat voluptatem sequi aut.</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- por domond -->
+
+<div class="appointment-section" id="appointment">
+    <div class="left-side">
+        <img src="./63673.jpg" alt="Doctors" class="doctor-img">
+
+        <div class="contact-box">
+            <div class="phone-icon">📞</div>
+            <div class="phone-number">06 66 66 66 66</div>
+        </div>
+    </div>
+
+    <div class="right-side">
+        <h1>Book appointment</h1>
+        <p>
+            Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui velit.
+            Iste dolor um atque similique praesentium soluta.
+        </p>
+
+        <div class="appointment-box">
+  
+
+    <form class="form-grid">
+        <!-- Department -->
+        <select required>
+            <option value="">Choose Department</option>
+            <option>Cardiology</option>
+            <option>Dental</option>
+            <option>Neurology</option>
+        </select>
+
+        <!-- Doctor -->
+        <select required style="margin-left: 24px;">
+            <option value="">Select Doctor</option>
+            <option>Doctor 1</option>
+            <option>Doctor 2</option>
+        </select>
+
+        <!-- Date -->
+        <input type="date" required style="width: 200px;">
+
+        <!-- Time -->
+        <input type="time" required style="margin-left: 0px;">
+
+        <!-- Name -->
+        <input type="text" placeholder="Full Name" required style="width: 200px;">
+
+        <!-- Phone -->
+        <input type="text" placeholder="Phone Number" required>
+    </form>
+
+    <textarea placeholder="Your Message" class="msg-box"></textarea>
+
+    <button class="Appointment">Submit</button>
+</div>
+
+</div>
+
+
+<!--  -->
+    </nav>
+
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo + Text + Icons -->
+        <div class="footer-col">
+            <div class="footer-logo">
+                <img src="./26835.jpg" alt="logo">
+            </div>
+
+            <p class="footer-desc">
+                Tempora dolorem voluptatum nam vero assumenda voluptate,
+                facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus.
+            </p>
+
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <!-- Department -->
+        <div class="footer-col">
+            <h3>Department</h3>
+            <ul>
+                <li><a href="#">Surgery</a></li>
+                <li><a href="#">Women's Health</a></li>
+                <li><a href="#">Radiology</a></li>
+                <li><a href="#">Cardioc</a></li>
+                <li><a href="#">Medicine</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Company Support</a></li>
+                <li><a href="#">FAQuestions</a></li>
+                <li><a href="#">Company Licence</a></li>
+            </ul>
+        </div>
+
+        <!-- Get In Touch -->
+        <div class="footer-col">
+            <h3>Get In Touch</h3>
+
+            <p>📧 Support Available for 24/7</p>
+            <p class="footer-mail">Support@email.com</p>
+
+            <p>🕑 Mon to Fri : 08:30 - 18:00</p>
+            <p class="footer-phone">06 66 66 66 66</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>Copyright © 2025. Designed & Developed by <span class="green">El-moussaoui walid</span></p>
+
+        <div class="subscribe-box">
+            <input type="email" placeholder="Your Email address">
+            <button>SUBSCRIBE</button>
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
